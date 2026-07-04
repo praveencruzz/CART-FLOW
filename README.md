@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛒 CartFlow – End-to-End Data Engineering Pipeline
 
 An end-to-end Data Engineering project that transforms raw e-commerce data into analytics-ready datasets using a modern data stack. The project demonstrates data ingestion, transformation, dimensional modeling, and interactive business reporting using Snowflake, dbt, SQL, and Power BI.
@@ -296,3 +297,7 @@ Computer Science Engineer | Data Engineering Enthusiast
 GitHub: https://github.com/praveencruzz
 
 LinkedIn: https://linkedin.com/in/praveensaravanakumar| T
+=======
+# CART-FLOW
+End-to-end data engineering project using Snowflake, dbt, Python, and SQL to build scalable ELT pipelines for e-commerce analytics.
+>>>>>>> fce7ee79a8fec5309f2a686fe2479d621e0e331b
