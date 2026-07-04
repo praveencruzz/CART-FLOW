@@ -230,7 +230,7 @@ The project supports business analysis including:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/CartFlow.git
+git clone https://github.com/praveencruzz/CART-FLOW.git
 ```
 
 ### Configure dbt
