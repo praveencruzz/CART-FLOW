@@ -296,7 +296,7 @@ Computer Science Engineer | Data Engineering Enthusiast
 
 GitHub: https://github.com/praveencruzz
 
-LinkedIn: https://linkedin.com/in/praveensaravanakumar| T
+LinkedIn: https://linkedin.com/in/praveensaravanakumar
 =======
 # CART-FLOW
 End-to-end data engineering project using Snowflake, dbt, Python, and SQL to build scalable ELT pipelines for e-commerce analytics.
