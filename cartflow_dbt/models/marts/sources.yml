@@ -1,0 +1,125 @@
+version: 2
+
+models:
+
+  - name: dim_customer
+    description: "Dimension table containing customer information."
+    config:
+      tags: ["mart", "dimension", "customer"]
+
+    columns:
+      - name: user_id
+        description: "Unique identifier for the customer."
+        tests:
+          - unique
+          - not_null
+
+      - name: department_id
+        description: "Department identifier."
+
+      - name: department
+        description: "Department associated with the customer's purchases."
+
+  - name: dim_product
+    description: "Dimension table containing product information."
+    config:
+      tags: ["mart", "dimension", "product"]
+
+    columns:
+      - name: product_id
+        description: "Unique identifier for the product."
+        tests:
+          - unique
+          - not_null
+
+      - name: unit_price
+        description: "Price of the product."
+
+      - name: seller_id
+        description: "Seller who supplies the product."
+
+  - name: dim_seller
+    description: "Dimension table containing seller information."
+    config:
+      tags: ["mart", "dimension", "seller"]
+
+    columns:
+      - name: seller_id
+        description: "Unique identifier for the seller."
+        tests:
+          - unique
+          - not_null
+
+      - name: seller_name
+        description: "Name of the seller."
+
+      - name: seller_city
+        description: "City where the seller is located."
+
+      - name: seller_state
+        description: "State where the seller is located."
+
+  - name: dim_date
+    description: "Dimension table containing order date information."
+    config:
+      tags: ["mart", "dimension", "date"]
+
+    columns:
+      - name: order_date
+        description: "Date on which the order was placed."
+        tests:
+          - unique
+          - not_null
+
+      - name: year
+        description: "Year of the order."
+
+      - name: month
+        description: "Month of the order."
+
+      - name: day
+        description: "Day of the month."
+
+  - name: fact_orders
+    description: "Fact table containing order transactions."
+    config:
+      tags: ["mart", "fact", "orders"]
+
+    columns:
+      - name: order_id
+        description: "Unique identifier for the order."
+        tests:
+          - unique
+          - not_null
+
+      - name: order_purchase_timestamp
+        description: "Timestamp when the order was placed."
+
+      - name: payment_type
+        description: "Payment method used."
+
+      - name: payment_value
+        description: "Amount paid for the order."
+
+      - name: review_score
+        description: "Customer review rating."
+
+  - name: fact_payments
+    description: "Fact table containing payment transactions."
+    config:
+      tags: ["mart", "fact", "payments"]
+
+    columns:
+      - name: order_id
+        description: "Order identifier."
+        tests:
+          - not_null
+
+      - name: payment_type
+        description: "Payment method."
+
+      - name: payment_installments
+        description: "Number of installments."
+
+      - name: payment_value
+        description: "Amount paid."

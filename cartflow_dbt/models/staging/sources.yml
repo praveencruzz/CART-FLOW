@@ -1,0 +1,153 @@
+version: 2
+
+sources:
+  - name: bronze
+    description: "Bronze layer containing raw e-commerce datasets loaded from CSV files."
+    database: CARTFLOW_DB
+    schema: BRONZE
+
+    tables:
+      - name: order_dates
+        description: "Contains order IDs and purchase timestamps."
+
+      - name: ecommerce_consumer_behaviour
+        description: "Contains customer ordering behaviour and product selections."
+
+      - name: order_items_qty
+        description: "Contains products purchased in each order with quantities."
+
+      - name: order_payments
+        description: "Contains payment information for each order."
+
+      - name: order_reviews
+        description: "Contains customer reviews and ratings."
+
+      - name: product_pricing
+        description: "Contains product prices and seller information."
+
+      - name: sellers
+        description: "Contains seller details including city and state."
+
+models:
+  - name: stg_orders
+    description: "Staging model for order dates."
+
+    config:
+      tags: ["staging", "orders"]
+
+    columns:
+      - name: order_id
+        description: "Unique identifier for an order."
+        tests:
+          - unique
+          - not_null
+
+      - name: order_purchase_timestamp
+        description: "Date and time when the order was placed."
+
+  - name: stg_customers
+    description: "Staging model for customer information."
+
+    config:
+      tags: ["staging", "customers"]
+
+    columns:
+      - name: user_id
+        description: "Unique identifier for the customer."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_products
+    description: "Staging model for product information."
+
+    config:
+      tags: ["staging", "products"]
+
+    columns:
+      - name: product_id
+        description: "Unique identifier for the product."
+        tests:
+          - unique
+          - not_null
+
+      - name: unit_price
+        description: "Price of the product."
+
+  - name: stg_payments
+    description: "Staging model for payment information."
+
+    config:
+      tags: ["staging", "payments"]
+
+    columns:
+      - name: order_id
+        description: "Order identifier."
+        tests:
+          - not_null
+
+      - name: payment_type
+        description: "Payment method."
+
+      - name: payment_value
+        description: "Payment amount."
+
+  - name: stg_reviews
+    description: "Staging model for customer reviews."
+
+    config:
+      tags: ["staging", "reviews"]
+
+    columns:
+      - name: review_id
+        description: "Unique review identifier."
+        tests:
+          - unique
+
+      - name: order_id
+        description: "Order identifier."
+
+      - name: review_score
+        description: "Customer rating."
+
+  - name: stg_sellers
+    description: "Staging model for seller information."
+
+    config:
+      tags: ["staging", "sellers"]
+
+    columns:
+      - name: seller_id
+        description: "Unique seller identifier."
+        tests:
+          - unique
+          - not_null
+
+      - name: seller_name
+        description: "Seller name."
+
+      - name: seller_city
+        description: "Seller city."
+
+      - name: seller_state
+        description: "Seller state."
+
+  - name: stg_order_items
+    description: "Staging model for order item details."
+
+    config:
+      tags: ["staging", "order_items"]
+
+    columns:
+      - name: order_id
+        description: "Order identifier."
+        tests:
+          - not_null
+
+      - name: product_id
+        description: "Product identifier."
+        tests:
+          - not_null
+
+      - name: quantity
+        description: "Quantity of the product ordered."

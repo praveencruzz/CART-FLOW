@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: int_orders
+    description: "Intermediate model combining order, payment, and review information into a single dataset."
+
+    config:
+      tags: ["intermediate", "orders"]
+
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order."
+        tests:
+          - unique
+          - not_null
+
+      - name: order_purchase_timestamp
+        description: "Timestamp when the customer placed the order."
+
+      - name: payment_type
+        description: "Payment method used for the order."
+
+      - name: payment_value
+        description: "Total payment amount for the order."
+
+      - name: review_score
+        description: "Customer review rating for the order."

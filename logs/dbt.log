@@ -1,0 +1,59 @@
+[0m23:25:34.569838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C64964F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C643D50A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C64295DF0>]}
+
+
+============================== 23:25:34.576820 | 077fa952-42b5-46e0-a3cf-dc14b5a7cb2f ==============================
+[0m23:25:34.576820 [info ] [MainThread]: Running with dbt=1.11.12
+[0m23:25:34.578819 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\prave\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init cartflow_dbt', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:25:34.628508 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\prave\.dbt
+[0m23:25:34.634507 [debug] [MainThread]: Starter project path: C:\Users\prave\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\include\starter_project
+[0m23:25:34.670971 [info ] [MainThread]: 
+Your new dbt project "cartflow_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:25:34.671983 [info ] [MainThread]: Setting up your profile.
+[0m23:25:55.998087 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m23:25:55.999074 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m23:25:55.999074 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m12:37:28.820192 [info ] [MainThread]: Profile cartflow_dbt written to C:\Users\prave\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:37:28.831442 [debug] [MainThread]: Command `dbt init` succeeded at 12:37:28.831442 after 47519.95 seconds
+[0m12:37:28.833862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C66E6D100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C66C8AA20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023C6700DB80>]}
+[0m12:37:28.835917 [debug] [MainThread]: Flushing usage events
+[0m12:37:30.890337 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:38:12.273052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028DA99AA4B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028DA99AB8F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028DA99AB680>]}
+
+
+============================== 12:38:12.321494 | fbf694f8-bfad-413b-bf89-e4ef131e7bab ==============================
+[0m12:38:12.321494 [info ] [MainThread]: Running with dbt=1.11.12
+[0m12:38:12.324491 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\prave\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init cartflow_dbt', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:38:12.393373 [info ] [MainThread]: A project called cartflow_dbt already exists here.
+[0m12:38:12.394374 [debug] [MainThread]: Command `dbt init` succeeded at 12:38:12.394374 after 0.51 seconds
+[0m12:38:12.395373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028DAA265C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028DA6A36BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028DA99AB8F0>]}
+[0m12:38:12.395373 [debug] [MainThread]: Flushing usage events
+[0m12:38:14.407579 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:39:04.262161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001322C26A090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001322C85F770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001322C5D9E20>]}
+
+
+============================== 12:39:04.270154 | 6352195e-7689-4b29-a01d-57a0482013e7 ==============================
+[0m12:39:04.270154 [info ] [MainThread]: Running with dbt=1.11.12
+[0m12:39:04.272155 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\prave\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:39:04.274174 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\prave\OneDrive\Desktop\CartFlow\CartFlow\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:39:04.276150 [debug] [MainThread]: Command `dbt run` failed at 12:39:04.275149 after 0.30 seconds
+[0m12:39:04.276150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001322C66AFF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001322DB8EC90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001322C3F9460>]}
+[0m12:39:04.277149 [debug] [MainThread]: Flushing usage events
+[0m12:39:06.632388 [debug] [MainThread]: An error was encountered while trying to flush usage events

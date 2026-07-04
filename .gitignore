@@ -1,0 +1,36 @@
+# Data — large CSVs are committed via Git LFS (see .gitattributes).
+# Still ignore non-CSV regenerated artifacts (Parquet, etc.) but keep the CSVs and reports.
+data/raw/*
+data/cleaned/*
+data/processed/*
+!data/raw/.gitkeep
+!data/cleaned/.gitkeep
+!data/processed/.gitkeep
+!data/raw/*.csv
+!data/cleaned/*.csv
+!data/processed/*.csv
+!data/cleaned/*.json
+!data/raw/*.json
+!data/processed/*.json
+
+# Local Hadoop/winutils (if using the native Windows run path)
+hadoop/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+_SUCCESS
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
